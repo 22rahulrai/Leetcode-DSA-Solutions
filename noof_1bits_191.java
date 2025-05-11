@@ -10,6 +10,17 @@ public class noof_1bits_191 {
         return k;
     }
 
+    public static int method2(int n){
+        int res = 0;
+        for (int i = 0; i < 32; i++) {
+            System.out.print(n>>i );
+            if (((n >> i) & 1) == 1) {
+                res += 1;
+            }
+        }
+        return res;
+    }
+
     public static int method3(int n){ // this method is good  O(log n)
         int count = 0;
         while (n != 0) {
@@ -20,14 +31,14 @@ public class noof_1bits_191 {
         }
         return count;
     }
-    public static int method2(int n){
-        int res = 0;
-        for (int i = 0; i < 32; i++) {
-            System.out.print(n>>i );
-            if (((n >> i) & 1) == 1) {
-                res += 1;
-            }
+
+    public static int method4(int n){
+        int c=0;
+        while(n!=0){
+            n=n&n-1;
+            c+=1;
         }
-        return res;
+
+        return c;
     }
 }
