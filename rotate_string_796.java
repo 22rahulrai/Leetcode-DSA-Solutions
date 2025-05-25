@@ -20,7 +20,7 @@ public class rotate_string_796 {
         char []arr=s.toCharArray();
 
         for(int i=0;i<s.length();i++){
-            rotateleft(arr);
+            rotate_byone(arr);
             String rotated=new String(arr);
             if(rotated.equals(goal)){
                 return true;
@@ -29,7 +29,7 @@ public class rotate_string_796 {
         return false;
     }
 
-    public static void rotateleft(char[] arr){
+    public static void rotate_byone(char[] arr){
         char first=arr[0];
 
         for(int i=0;i<arr.length-1;i++){
