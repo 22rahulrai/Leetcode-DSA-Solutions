@@ -27,7 +27,7 @@ public class Remove_outermost_parentheses_1021 {
         return st.toString();
     }
 
-    public static String method2(String s){ // o(n)
+    public static String method2(String s){ // o(n)  this code is same as above we just change substring method
         StringBuilder st=new StringBuilder();
         int blanced=0;
         int start=0;
